@@ -11,7 +11,6 @@ from calculator.history_manager import history_manager
 
 class HistoryCommand(Command):
     """Handles history-related commands with CSV integration."""
-    
     def execute(self, *args):
         """Handle different history commands including CSV operations."""
         if not args:
@@ -81,6 +80,14 @@ class HistoryCommand(Command):
                 print(f"Failed to delete record {index}.")
         except ValueError:
             print("Invalid index. Please provide a valid number.")
+def display_history(self):
+    """Display the calculation history in a tabular format."""
+    if self.df.empty:
+        print("No calculation history available.")
+        return
+    
+    print("\nCalculation History:")
+    print(tabulate(self.df.tail(10), headers='keys', tablefmt='psql', showindex=False))
 
     def _filter_history(self, operation):
         """Filter history by operation type."""
