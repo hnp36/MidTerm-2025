@@ -1,0 +1,5 @@
+timestamp,value1,value2,operation,result
+2025-03-16T00:40:28.891168,29,10,addition,39
+2025-03-16T00:40:42.266952,26,10,subtraction,16
+2025-03-16T00:40:52.400560,10,10,multiplication,100
+2025-03-16T00:41:02.502625,45,9,division,5
