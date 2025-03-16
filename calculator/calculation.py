@@ -27,6 +27,7 @@ class Calculation:
     def perform(self) -> Decimal:
         """Execute the calculation"""
         return self.operation(self.value1, self.value2)
+
     @classmethod
     def clear_history(cls):
         """Clears the calculation history."""

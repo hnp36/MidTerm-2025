@@ -4,6 +4,8 @@ from typing import Callable
 from .operation import addition, subtraction, multiplication, division
 from .calculation import Calculation
 from .calculations import Calculations
+# Import our history manager
+from .history_manager import history_manager
 
 class Calculator:
     """Calculator class"""
@@ -14,6 +16,8 @@ class Calculator:
         """Create and perform a calculation, then return the result."""
         calculation = Calculation.create(value1, value2, operation)
         Calculations.add_calculation(calculation)
+        # Add to pandas history manager
+        history_manager.add_calculation(calculation)
         return calculation.perform()
 
     @staticmethod
