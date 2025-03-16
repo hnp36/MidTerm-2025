@@ -111,7 +111,8 @@ Where? Logging is implemented in calculator/logger.py.
         logging.FileHandler("logs/calculator.log"),
         logging.StreamHandler()
     ]
-)```
+) 
+```
 
 ## 🛡️ Exception Handling: LBYL vs. EAFP
 
